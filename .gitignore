@@ -1,0 +1,38 @@
+# Environment variables
+.env
+*.env
+
+# Token storage
+data/token.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data (raw and processed - user's personal data)
+data/raw/
+data/processed/
+data/features/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+
