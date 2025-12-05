@@ -12,11 +12,11 @@ import plotly.graph_objects as go
 from pathlib import Path
 import sys
 
-# Add src to path for visuals
-sys.path.append(str(Path(__file__).parent.parent / "src"))
+# Add project root to path for imports
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
 
 from src.visuals import plot_time_heatmap
-import matplotlib.pyplot as plt
 
 # Page config
 st.set_page_config(
@@ -405,5 +405,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
 
 

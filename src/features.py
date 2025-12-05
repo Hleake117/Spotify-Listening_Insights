@@ -172,7 +172,9 @@ def perform_clustering(
     print("-" * 60)
     for cluster_id in range(n_clusters):
         cluster_data = df_clean[df_clean["cluster"] == cluster_id]
-        print(f"\nCluster {cluster_id} ({df_clean['mood_label'].iloc[0]}):")
+        # Get the mood label for this specific cluster
+        mood_label = cluster_data['mood_label'].iloc[0] if len(cluster_data) > 0 else "Unknown"
+        print(f"\nCluster {cluster_id} ({mood_label}):")
         print(f"  Size: {len(cluster_data)} tracks")
         print(f"  Mean Energy: {cluster_data['energy'].mean():.3f}")
         print(f"  Mean Valence: {cluster_data['valence'].mean():.3f}")

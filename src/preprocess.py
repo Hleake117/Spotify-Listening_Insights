@@ -66,9 +66,6 @@ def merge_tracks_with_features(
     
     Note: Audio features may be empty if the endpoint is unavailable
     (Spotify deprecated /audio-features for new apps in Nov 2024).
-    """
-    """
-    Merge track data with audio features.
     
     Args:
         tracks_data: Dictionary mapping time_range to list of tracks
